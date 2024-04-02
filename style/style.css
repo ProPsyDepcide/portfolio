@@ -14,8 +14,8 @@ body{
 }
 
 h1{
+    text-align: center;
     color: rgba(42, 42, 112, 0.89);
-    padding-left: 70vh;
     padding-bottom: 10vh;
 }
 
@@ -24,24 +24,24 @@ h2{
 }
 
 section{
+    padding-top: 5vh;
+    gap: 5vh;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     width: 100%;
     height: max-content;
-    gap: 5vh;
-    display: flex;
-    align-items: center;
 }
 
 .box{
+    width: 100%;
     transition: 0.3s;
-    margin-bottom: 5vh;
-    width: max-content;
     background-color: rgba(102, 102, 236, 0.493);
     border-radius: 5px;
     padding: 2vh;
 }
 
 .kart > img {
-    width: 55vh;
+    width: 100%;
 }
 
 a{
@@ -52,4 +52,38 @@ a{
 .box:hover{
     width: 400px;
     transform: scale(1.1);
+}
+
+@media screen and (max-width:800px){
+
+    h1{
+        font-size: 25px;
+    }
+    
+    h2{
+        font-size: 20px;
+    }
+    section{
+        gap: 1vh;
+        padding-top: 2vh;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+@media screen and (max-width:400px){
+    
+    h1{
+        font-size: 15px;
+    }
+    
+    h2{
+        font-size: 10px;
+    }
+
+    section{
+        padding-top: 1vh;
+        grid-template-columns: repeat(1,1fr);
+    }
+
 }
